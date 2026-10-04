@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "fle-vocab-pwa-";
-const CACHE_NAME = CACHE_PREFIX + "f708be98c1ea";
+const CACHE_NAME = CACHE_PREFIX + "fadd73ee3c8b";
 const APP_ROOT = new URL("./", self.registration.scope).href;
 const APP_FILES = ["./", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"]
   .map((path) => new URL(path, APP_ROOT).href);
@@ -33,7 +33,7 @@ self.addEventListener("fetch", (event) => {
     const cache = await caches.open(CACHE_NAME);
     const key = appNavigation ? APP_ROOT : url.href;
     try {
-      const response = await fetch(request);
+      const response = await fetch(request, appNavigation ? { cache: "no-store" } : undefined);
       if (response.ok) {
         await cache.put(key, response.clone()).catch(() => {});
         return response;
