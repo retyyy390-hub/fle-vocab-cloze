@@ -1,16 +1,16 @@
-# FLE Vocabulary · November 7.1
+# FLE Vocabulary · November 7.2
 
 Live site: https://retyyy390-hub.github.io/fle-vocab-cloze/
 
-November contains Lists 7–11: 75 headwords and 750 sentence questions. October Lists 4–6 and existing browser records remain available. Select one word family from the basket, then edit its form directly in the sentence. Meaning and form are graded separately. A form error enters the same mistake-review loop as a word error; same-day success is verified again on another day.
+November contains Lists 7–11: 75 headwords and 750 sentence questions. October Lists 4–6 and existing browser records remain available. Select one word family from the basket, then edit its form directly in the sentence. Meaning and form are graded separately. Every November sentence has a context-specific offline SVG illustration; polysemous words use different scenes for different senses. Illustrations are visible in the reference and feedback views, and optional during a quiz. Revealing one is recorded as assistance and cannot count as independent mastery. A form error enters the same mistake-review loop as a word error; same-day success is verified again on another day.
 
-The root `index.html` is a self-contained production build. `sw.js`, the manifest and app icons support installation and offline use on the GitHub Pages project path. All vocabulary, icons and existing illustrations are bundled locally. Updates wait for the learner to refresh; unfinished answers are saved before refreshing.
+The root `index.html` is a self-contained production build. `sw.js`, the manifest and app icons support installation and offline use on the GitHub Pages project path. All vocabulary, icons and illustrations are bundled locally; no external image service is required. Updates wait for the learner to refresh; unfinished answers are saved before refreshing.
 
-`FLE-November-Lists-7-11.txt` contains the 75 primary entries, one per line, including complete phrases. It can also be copied by List or downloaded from the website’s word-list page. The Baicizhan website has not been filled in.
+`FLE-November-Lists-7-11.txt` contains the 75 primary entries, separated by English commas, including complete phrases. It can also be copied by List or downloaded from the website’s word-list page. The Baicizhan website has not been filled in.
 
 ## Rebuild
 
-Extract `source-november-v7.1.zip`, then use Node.js 24 or later:
+Extract `source-november-v7.2.zip`, then use Node.js 24 or later:
 
 ```sh
 npm ci

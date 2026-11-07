@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "fle-vocab-pwa-";
-const CACHE_NAME = "fle-vocab-pwa-00165c369246";
+const CACHE_NAME = "fle-vocab-pwa-104bc83f630e";
 const APP_ROOT = new URL("./", self.registration.scope).href;
 const APP_FILES = ["./", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"]
   .map((path) => new URL(path, APP_ROOT).href);
