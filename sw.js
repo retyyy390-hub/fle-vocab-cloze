@@ -1,5 +1,5 @@
 const CACHE_PREFIX = "fle-vocab-pwa-";
-const CACHE_NAME = CACHE_PREFIX + "387a44d8cf68";
+const CACHE_NAME = "fle-vocab-pwa-00165c369246";
 const APP_ROOT = new URL("./", self.registration.scope).href;
 const APP_FILES = ["./", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"]
   .map((path) => new URL(path, APP_ROOT).href);
@@ -8,8 +8,11 @@ self.addEventListener("install", (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
     await cache.addAll(APP_FILES.map((url) => new Request(url, { cache: "reload" })));
-    await self.skipWaiting();
   })());
+});
+
+self.addEventListener("message", (event) => {
+  if (event.data?.type === "SKIP_WAITING") self.skipWaiting();
 });
 
 self.addEventListener("activate", (event) => {
